@@ -1,0 +1,50 @@
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;900&display=swap" rel="stylesheet">
+<link rel='stylesheet' id='fontawesome-css'  href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=5.3.2' type='text/css' media='all' />
+<style>
+body {padding-bottom: 100px !important;}
+.playerBar {position: fixed; bottom: 0; left: 0; width: 100%; height: auto; z-index: 999999; margin:0; padding: 0 20px !important; background-color: rgba(139,0,0,0.9); font-family: 'Lato', sans-serif !important; z-index: 9999; text-align: center; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin:0; padding:0; }
+.textwidget.custom-html-widget {display: none !important;}
+.player {margin:0 auto; padding: 12px 0 0; width: 100%; max-width: 980px; text-align: left;}
+.player ul {margin:0; padding:0; display: inline-block; width: auto; list-style-type: none;}
+.player ul li {margin:0; padding:0; float: left; font-size: 15px; color: #fff; line-height: 66px; font-weight: 300; text-transform: uppercase;  line-height: 1; letter-spacing: 2px; position: relative;}
+.player ul li strong {font-weight: 900;}
+.player ul li:nth-of-type(1) {padding: 11px 10px 0 0;}
+.player ul li span {display: block; margin:13px 0 0 0; padding: 0; float: left; width:32px;  cursor: pointer;  font-size: 28px; color: #fff;}
+.player ul li small {clear: both; display: block; margin:5px 0 0 0; font-size: 12px; line-height: 1; float: left;}
+
+
+.player ul li:last-of-type {position: absolute; right: 0; bottom: 0; font-size: 12px; letter-spacing: 0;}
+</style>
+
+
+
+<div class="playerBar">
+<div class="player">
+<ul>
+<li>Ao vivo <strong>NOME DA RÁDIO</strong></li>
+<li><div onclick="document.getElementById('fm').play()" class="play" style="margin:0 0 0 18px; padding: 9px 0 0 14px; width: 66px; height: 66px; background-color: #fff; border-radius: 50%; cursor: pointer; font-size: 46px; text-align: center; color: #8B0000;"><i class="fa fa-play" aria-hidden="true"></i></div></li>
+<li><div onclick="document.getElementById('fm').pause()" class="stop" style="margin:16px 20px 0 20px; padding: 0px 0 0 2px; width: 24px; height: 24px; background-color: #fff; border-radius: 50%; cursor: pointer; font-size: 13px; text-align: center; color: #8B0000;"><i class="fa fa-pause" aria-hidden="true"></i></div></li>
+<li><span onclick="document.getElementById('fm').volume+=0.1"><i class="fa fa-plus-circle" aria-hidden="true"></i></span><span onclick="document.getElementById('fm').volume-=0.1"><i class="fa fa-minus-circle" aria-hidden="true"></i></span><small>Volume</small>
+</li>
+
+<li style="display: none;">
+<audio id="fm" controls autoplay loop allow="autoplay">
+<source src="PLAYER DA RÁDIO" type="audio/mp3">
+</audio>
+<script> document.getElementById('fm').play(); </script>
+</li>
+
+</ul>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+</div>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137163963-8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-137163963-8');
+</script>
+</body>
+</html>
